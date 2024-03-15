@@ -3,24 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
+import { PagesRoutingModule } from './pages/pages-routing.module';
+import { NotPageFoundComponent } from './not-page-found/not-page-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SidebarComponent,
-    FooterComponent,
-    HeaderComponent,
-    BreadcrumbsComponent
+    NotPageFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule,
+    SharedModule,
+    PagesRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
